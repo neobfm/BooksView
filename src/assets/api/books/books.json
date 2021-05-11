@@ -1,0 +1,31 @@
+[{
+        "bookID": 7,
+        "title": "The Hobbit ",
+        "code": "G123 - N00 ",
+        "author": "J R R Tolkien",
+        "price": 12.31,
+        "bookks": " assets / book1.png ",
+        "starRating": 4.5,
+        "publicationDate": "August 09,1997"
+    },
+    {
+        "bookID": 17,
+        "title": "Curious george",
+        "code": "Q123-N44",
+        "author": "H A Rey",
+        "price": 78.31,
+        "bookks": "assets/book2.png",
+        "starRating": 2.5,
+        "publicationDate": "June 04,1941"
+    },
+    {
+        "bookID": 156,
+        "title": "Rey Rey ",
+        "code": "D123-N65",
+        "author": "H A Rey",
+        "price": 89.21,
+        "bookks": "assets/book3.png",
+        "starRating": 1.0,
+        "publicationDate": "May 16,1943"
+    }
+]
