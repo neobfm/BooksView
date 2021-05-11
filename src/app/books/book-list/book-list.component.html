@@ -1,0 +1,39 @@
+<h3>{{ title }}</h3>
+<div *ngIf="books.length==0">
+    <p>No books Found</p>
+</div>
+<div class="col-md-2">FilterBy:</div>
+<div class="col-md-4">
+    <input type="text" [(ngModel)]="bookFilter">
+    <p>{{ bookFilter }}</p>
+</div>
+<table class=" table " *ngIf="books.length>=1">
+    <thead>
+        <th>
+            <button (click)="toggleImage()" class="btn btn-primary">{{ showImage ? 'Hide':'Show' }}Image</button>
+        </th>
+        <th>BookName</th>
+        <th>Author</th>
+        <th>PublicationYear</th>
+        <th>Price</th>
+        <th>Rating</th>
+        <th>Code</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let boo of filteredBooks">
+
+            <td>
+                <img [src]="boo.bookks" width="80" height="80" [title]="boo.title" *ngIf="showImage">
+            </td>
+            <td>{{ boo.title | uppercase }}</td>
+            <td>{{ boo.author }}</td>
+            <td>{{ boo.publicationDate |date: 'dd-MM-yyyy'}}</td>
+            <td>{{ boo.price }}</td>
+            <!-- <td>{{ boo.starRating }}</td> -->
+            <td>
+                <app-star [rating]="boo.starRating" (ratingClicked)="onRatingClick($event)"></app-star>
+            </td>
+            <td>{{ boo.code | lowercase | book: '-'}}</td>
+        </tr>
+    </tbody>
+</table>
